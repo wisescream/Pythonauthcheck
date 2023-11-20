@@ -12,7 +12,7 @@ logging.getLogger('selenium.webdriver').setLevel(logging.WARNING)
 
 
 # Path to your Excel file
-excel_file_path = "C:/AuthUness/ExcelFile/Copie de RDV AUDITE E SIGNE  – 16 janvier à 18_44.xlsx"
+excel_file_path = "YOUR FILE"
 
 # Set Chrome options with the correct path to Chrome binary and run in headless mode
 chrome_options = webdriver.ChromeOptions()
@@ -22,7 +22,7 @@ chrome_options.binary_location = r"C:\Program Files\Google\Chrome\Application\ch
 driver = webdriver.Chrome(options=chrome_options)
 
 # Open the website
-driver.get('https://auth.anah.fr')
+driver.get('THE WEBSITE')
 
 # Open the Excel file
 workbook = openpyxl.load_workbook(excel_file_path)
