@@ -54,10 +54,4 @@ The script will automate the login attempts and log the results in a text file c
 - Adjust the waiting times, login success conditions, and other parameters as needed.
 
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
 Happy automating!
