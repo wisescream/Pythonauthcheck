@@ -83,7 +83,7 @@ for row_number, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), s
 
         # Open a new browser window and navigate to the login page
         driver = webdriver.Chrome(options=chrome_options)
-        driver.get('https://auth.anah.fr')
+        driver.get('')
 
 # Close the last browser window
 driver.quit()
