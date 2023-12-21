@@ -30,8 +30,8 @@ sheet = workbook.active  # You can specify a sheet by name if needed
 
 # Iterate through all rows in the Excel file
 for row_number, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
-    # Check if the value in the B column (2nd column) is not empty and is "maison" (case-insensitive)
-    if any(cell and cell.lower() == 'maison' for cell in row[1:2]):
+    # Check if the value in the B column (2nd column) is not empty and is "EXAMPLE:HOME" (case-insensitive)
+    if any(cell and cell.lower() == 'home' for cell in row[1:2]):
         # Extract credentials from the G column (7th column)
         credentials = row[6]  # Adjust the column index if needed
 
@@ -66,7 +66,7 @@ for row_number, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), s
 
         # Check if the login was successful or not while waiting
         for _ in range(40):
-            if 'https://www.maprimerenov.gouv.fr' in driver.current_url:
+            if 'PAGE TO CHECK IF LOGIN WAS SUCCESSFUL' in driver.current_url:
                 print(f"Successful login on row {row_number}")
                 with open('login_log.txt', 'a') as log_file:
                     log_file.write(f"Successful login on row {row_number}\n")
@@ -83,7 +83,7 @@ for row_number, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), s
 
         # Open a new browser window and navigate to the login page
         driver = webdriver.Chrome(options=chrome_options)
-        driver.get('')
+        driver.get('THE LOGIN PAGE')
 
 # Close the last browser window
 driver.quit()
